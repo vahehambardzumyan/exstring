@@ -8,16 +8,14 @@ public class Main {
         System.out.println("Please enter word");
         Scanner scanner = new Scanner(System.in);
         String str= scanner.nextLine();
-        System.out.println(notString(str));
+        String a=frontBack(str);
+        System.out.println(a);
     }
-    public static String notString(String str) {
-        String not= "not";
+    public static String frontBack(String str)  {
+    String b=str.substring(0,1);
+    String c=str.substring(1,str.length()-1);
+    String d=str.substring(str.length()-1,str.length());
 
-        if (str.indexOf("not")>=0){
-            return str;
-        }else {
-             return  "not" + " " +str;
-            }
-        }
-
+        return d+c+b;
     }
+}
